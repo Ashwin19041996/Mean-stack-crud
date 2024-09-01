@@ -1,0 +1,85 @@
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body> -->
+  <div id="maindiv">
+
+    <div id="navbar">
+      <div style="margin-left: 10px;"><h5>LAPTOP SERVICE</h5></div>
+      <div id="list">
+        <ul>
+           <a routerLink="/"><li>HOME</li></a>
+           <a  routerLink="/services"><li>SERVICES</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <section id="firstsection">
+      <div id="textdiv">
+        <div id="insidetextdiv">
+          <h2>QUICK REPAIR FROM </h2><br>
+          <h2>THE BEST TEAM</h2>
+  
+        </div>
+      </div>
+  
+      <div id="formdiv">
+
+         <form    #customerdata="ngForm" (ngSubmit)="sendformdata(customerdata.value)"  method="post">
+    <div class="form-group">
+      <label   for="exampleInputEmail1">NAME</label>
+      <input  type="text" name="name" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+      <small   id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label  for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label  for="exampleInputEmail1">CONTACT NUMBER</label>
+      <input type="number" name="contact_number" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter contact number">
+      <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label  for="exampleInputPassword1">LAPTOP MODEL</label>
+      <input type="text" name="laptop_model" ngModel class="form-control" id="exampleInputPassword1" placeholder="laptop model">
+    </div>
+    <div class="form-group">
+      <label  for="exampleInputPassword1">DESCRIBE PROBLEM</label>
+      <textarea type="text" name="laptop_issue" ngModel class="form-control" id="exampleInputPassword1" placeholder="type your laptop problem"></textarea>
+    </div>
+    <div class="form-check">
+      <input  type="checkbox"   class="form-check-input" id="exampleCheck1">
+      <label  class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    @if (userid){
+      <button (click)="updateservice(userid,customerdata.value)" type="submit" class="btn btn-primary">Update</button>
+    }
+    @else{
+      <button type="submit" class="btn btn-primary">Submit</button>
+    }
+    
+  </form>
+
+        
+       
+      </div>
+
+    </section>
+
+   
+    
+    
+
+    
+  </div>
+
+ 
+ 
+  
+<!-- </body>
+</html> -->

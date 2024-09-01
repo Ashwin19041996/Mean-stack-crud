@@ -1,0 +1,36 @@
+<div id="updateform">
+    <form [formGroup]="form"     method="post">
+        <div class="form-group">
+          <label   for="exampleInputEmail1">NAME</label>
+          <input  type="text" formControlName="name"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+          <small   id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label  for="exampleInputEmail1">Email address</label>
+          <input type="email" formControlName="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label  for="exampleInputEmail1">CONTACT NUMBER</label>
+          <input type="number" formControlName="contact_number"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter contact number">
+          <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label  for="exampleInputPassword1">LAPTOP MODEL</label>
+          <input type="text" formControlName="laptop_model"  class="form-control" id="exampleInputPassword1" placeholder="laptop model">
+        </div>
+        <div class="form-group">
+          <label  for="exampleInputPassword1">DESCRIBE PROBLEM</label>
+          <textarea type="text" formControlName="laptop_issue"  class="form-control" id="exampleInputPassword1" placeholder="type your laptop problem"></textarea>
+        </div>
+        <div class="form-check">
+          <input  type="checkbox"   class="form-check-input" id="exampleCheck1">
+          <label  class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+       
+          <button (click)="updateserviceuser()" type="submit" class="btn btn-primary">UDATE</button>
+        
+        
+      </form>
+      <button id="backhome" routerLink="/home" class="btn btn-primary">BACK TO HOME</button>
+</div>

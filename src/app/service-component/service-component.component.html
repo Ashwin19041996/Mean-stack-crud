@@ -1,0 +1,28 @@
+<div id="servicetable">
+    <div id="insidediv">
+    <table>
+        <thead>
+        <tr id="headingrow">
+            <th class="headingclass">NAME</th>
+            <th class="headingclass">EMAIL</th>
+            <th class="headingclass">CONTACT NUMBER</th>
+            <th class="headingclass">LAPTOP MODEL</th>
+            <th class="headingclass">LAPTOP COMPLAINT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of allservices" >
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.contact_number}}</td>
+            <td>{{i.laptop_model}}</td>
+            <td>{{i.laptop_issue}}</td>
+            <td  ><button [routerLink]="'/updateform/'+i._id"  class="btn btn-success">EDIT</button></td>
+            <td ><button (click)="deleteservice(i._id)"  class="btn btn-danger">DELETE</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <button id="backhome" routerLink="/home" class="btn btn-primary">BACK TO HOME</button>
+</div>
+</div>
+
